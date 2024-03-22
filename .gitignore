@@ -1,0 +1,13 @@
+node_modules
+
+.cache
+.vercel
+.output
+.env
+.vscode
+.node-persist
+
+public/build
+public/sw.js
+/api
+build

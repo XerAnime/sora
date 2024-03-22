@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# check lint/format on staged files
+echo "Run pre-commit tasks"
+pnpm lint-staged --quiet || (
+  echo "Please lint and format your code before commit!";
+  false;
+)

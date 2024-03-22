@@ -1,0 +1,128 @@
+{
+  "extends": [
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "@remix-run/eslint-config",
+    "@remix-run/eslint-config/node"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "rules": {
+    "arrow-body-style": 0,
+    "comma-dangle": 0,
+    "consistent-return": 0,
+    "func-names": 0,
+    "jsx-a11y/accessible-emoji": 0,
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "jsx-a11y/href-no-hash": "off",
+    "max-len": 0,
+    "no-alert": 0,
+    "no-console": "warn",
+    "no-debugger": 0,
+    "no-empty-function": "off",
+    "no-nested-ternary": "off",
+    "no-param-reassign": [2, { "props": false }],
+    "no-shadow": "off",
+    "no-throw-literal": "off",
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": [2, { "allowTaggedTemplates": true }],
+    "prefer-const": ["error", { "destructuring": "all" }],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "semi": true,
+        "printWidth": 100,
+        "endOfLine": "auto"
+      }
+    ],
+    "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "radix": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react/display-name": 1,
+    "react/forbid-prop-types": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 0,
+    "react/no-unescaped-entities": 0,
+    "react/prefer-stateless-function": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0,
+    "space-before-function-paren": 0,
+    // @typescript-eslint
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-throw-literal": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "all",
+        "argsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_",
+        "ignoreRestSiblings": false
+      }
+    ],
+    //import
+    "import/no-cycle": "error",
+    "import/prefer-default-export": "off",
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-duplicates": "error",
+    "sort-imports": "off",
+    "tailwindcss/no-custom-classname": "off"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    ".cache",
+    "public",
+    ".vscode",
+    "api",
+    "*.config.js",
+    "*.lock",
+    "*.json",
+    "*.yaml",
+    "server.ts",
+    "build"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "./app/entry.client.tsx",
+        "./app/entry.server.tsx",
+        "./app/entry.worker.ts",
+        "./app/services/**/*.ts",
+        "./app/utils/**/*.ts"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ],
+  "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint", "jsx-a11y", "tailwindcss"],
+  "settings": {
+    "tailwindcss": {
+      "callees": ["tv", "classNames", "cn"]
+    },
+    "import/resolver": { "typescript": {} },
+    "react": { "version": "detect" }
+  }
+}

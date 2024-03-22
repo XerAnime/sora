@@ -1,0 +1,32 @@
+{
+  "trailingComma": "all",
+  "singleQuote": true,
+  "semi": true,
+  "printWidth": 100,
+  "endOfLine": "auto",
+  "importOrder": [
+    "^(react/(.*)$)|^(react$)",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^types$",
+    "^~/types/(.*)$",
+    "^~/routes/(.*)$",
+    "^~/services/(.*)$",
+    "^~/utils/(.*)$",
+    "^~/context/(.*)$",
+    "^~/store/(.*)$",
+    "^~/constants/(.*)$",
+    "^~/components/layouts/(.*)$",
+    "^~/components/media/(.*)$",
+    "^~/components/elements/(.*)$",
+    "^~/components/styles/(.*)$",
+    "^~/components/(.*)$",
+    "^~/assets/(.*)$",
+    "^~/styles/(.*)$",
+    "",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderTypeScriptVersion": "5.0.0",
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"]
+}
